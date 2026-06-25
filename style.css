@@ -1,0 +1,364 @@
+/*
+Theme Name: Blueshore Child
+Theme URI:
+Description: Divi Child Theme for Blueshore
+Author: Solid Mass Media
+Author URI:
+Template: Divi
+Version: 1.0.0
+*/
+
+/* ─── Custom Fonts ─────────────────────────────────────── */
+@font-face {
+  font-family: 'Ginka';
+  src: url('fonts/Ginka-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ginka';
+  src: url('fonts/Ginka-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aptos';
+  src: url('fonts/Aptos.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Design Tokens ─────────────────────────────────────── */
+:root {
+  /* Brand */
+  --color-primary:    #0d1d43;
+  --color-accent:     #e9884e;
+  --color-secondary:  #a7d1ef;
+
+  /* Text */
+  --color-text:       #231f1f;
+
+  /* Neutrals */
+  --color-white:      #ffffff;
+  --color-light-gray: #ebebeb;
+  --color-mid-gray:   #c3c3c3;
+  --color-brown:      #a5582a;
+
+  /* Font */
+  --font-primary:   'Ginka', sans-serif;
+  --font-secondary: 'Aptos', sans-serif;
+}
+
+/* ─── Utility Classes ───────────────────────────────────── */
+.font-aptos {
+  font-family: var(--font-secondary) !important;
+}
+
+/* ─── Global Typography ─────────────────────────────────── */
+body,
+h1, h2, h3, h4, h5, h6,
+.et_pb_module {
+  font-family: var(--font-primary) !important;
+}
+
+/* ─── Buttons ───────────────────────────────────────────── */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 1px solid var(--color-accent);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-accent);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-accent);
+}
+
+/* ─── Checklist ─────────────────────────────────────────── */
+.check-list ul {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.check-list ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0.5em;
+}
+
+.check-list ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 18px;
+  height: 18px;
+  background: url('/wp-content/uploads/check-icon.svg') no-repeat center center;
+  background-size: contain;
+}
+
+/* ─── Arrow list ────────────────────────────────────────── */
+.arrow-list ul {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.arrow-list ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0;
+}
+
+.arrow-list ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 9px;
+  height: 9px;
+  background: url('/wp-content/uploads/arrow-icon.svg') no-repeat center center;
+  background-size: contain;
+}
+
+/* ─── Buttons ───────────────────────────────────────────── */
+.btn-secondary::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.746094 11.0562L10.7461 1.05615M0.746094 1.05615H10.7461V11.0562' stroke='%23E9884E' stroke-width='2.11222'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* ─── Full Height Image ─────────────────────────────── */
+.full-height-image > .et_pb_image, .full-height-image .et_pb_image_wrap, .full-height-image img {
+    height:100% !important;
+}
+
+.full-height-image img{
+    object-fit:cover;
+}
+
+/* ═══════════════════════════════════════════════════
+   Featured Projects Section
+   ═══════════════════════════════════════════════════ */
+
+/* ── Tab Carousel ───────────────────────────────── */
+.fp-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.fp-tab {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.18);
+  font-size: 34px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+  transition:
+    color     0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.fp-tab[data-distance="1"] {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.fp-tab.is-active,
+.fp-tab[data-distance="0"] {
+  color: var(--color-white);
+  font-size: 34px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+
+.fp-tab:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* ── Panels (bottom row) ────────────────────────── */
+.fp-panels {
+  position: relative;
+}
+
+.fp-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.fp-panel.is-active {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  gap: 60px;
+  align-items: stretch;
+  opacity: 1;
+}
+
+.fp-panel.is-leaving {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  gap: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── Panel Content (left) ───────────────────────── */
+.fp-panel__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.fp-project-title {
+  font-family: var(--font-primary);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-white);
+  margin: 0;
+  max-width: 360px;
+}
+
+.fp-description {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-white);
+  margin: 0;
+  max-width: 360px;
+}
+
+.fp-client {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fp-client__label {
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: var(--color-secondary);
+}
+
+.fp-client__name {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--color-white);
+}
+
+.fp-cta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* ── Panel Image (right) ────────────────────────── */
+.fp-panel__image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.fp-panel__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .fp-tab.is-active {
+    font-size: 34px;
+  }
+
+  .fp-panel.is-active,
+  .fp-panel.is-leaving {
+    grid-template-columns: 1fr;
+  }
+
+  .fp-panel__image {
+    max-height: 400px;
+  }
+
+  .fp-panel__image img {
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 640px) {
+  .fp-tab {
+    font-size: 34px;
+  }
+
+  .fp-tab.is-active {
+    font-size: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fp-tab,
+  .fp-panel {
+    transition: none;
+  }
+}
