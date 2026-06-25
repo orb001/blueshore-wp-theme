@@ -36,21 +36,21 @@ Version: 1.0.0
 /* ─── Design Tokens ─────────────────────────────────────── */
 :root {
   /* Brand */
-  --color-primary:    #0d1d43;
-  --color-accent:     #e9884e;
-  --color-secondary:  #a7d1ef;
+  --color-primary: #0d1d43;
+  --color-accent: #e9884e;
+  --color-secondary: #a7d1ef;
 
   /* Text */
-  --color-text:       #231f1f;
+  --color-text: #231f1f;
 
   /* Neutrals */
-  --color-white:      #ffffff;
+  --color-white: #ffffff;
   --color-light-gray: #ebebeb;
-  --color-mid-gray:   #c3c3c3;
-  --color-brown:      #a5582a;
+  --color-mid-gray: #c3c3c3;
+  --color-brown: #a5582a;
 
   /* Font */
-  --font-primary:   'Ginka', sans-serif;
+  --font-primary: 'Ginka', sans-serif;
   --font-secondary: 'Aptos', sans-serif;
 }
 
@@ -61,7 +61,12 @@ Version: 1.0.0
 
 /* ─── Global Typography ─────────────────────────────────── */
 body,
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .et_pb_module {
   font-family: var(--font-primary) !important;
 }
@@ -77,7 +82,10 @@ h1, h2, h3, h4, h5, h6,
   font-size: 16px;
   text-decoration: none;
   line-height: 1;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
   cursor: pointer;
 }
 
@@ -118,7 +126,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .check-list ul li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0.4em;
@@ -142,7 +150,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .arrow-list ul li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0.4em;
@@ -166,12 +174,18 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ─── Full Height Image ─────────────────────────────── */
-.full-height-image > .et_pb_image, .full-height-image .et_pb_image_wrap, .full-height-image img {
-    height:100% !important;
+.full-height-image {
+  height: auto;
 }
 
-.full-height-image img{
-    object-fit:cover;
+.full-height-image > .et_pb_image,
+.full-height-image .et_pb_image_wrap,
+.full-height-image img {
+  height: 100% !important;
+}
+
+.full-height-image img {
+  object-fit: cover;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -200,17 +214,17 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: -0.02em;
   margin-bottom: 4px;
   transition:
-    color     0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.7s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
-.fp-tab[data-distance="1"] {
+.fp-tab[data-distance='1'] {
   color: rgba(255, 255, 255, 0.42);
 }
 
 .fp-tab.is-active,
-.fp-tab[data-distance="0"] {
+.fp-tab[data-distance='0'] {
   color: var(--color-white);
   font-size: 34px;
   line-height: 1.05;
