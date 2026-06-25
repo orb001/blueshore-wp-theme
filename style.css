@@ -181,6 +181,7 @@ h6,
 .full-height-image > .et_pb_image,
 .full-height-image .et_pb_image_wrap,
 .full-height-image img {
+  width: 100% !important;
   height: 100% !important;
 }
 
