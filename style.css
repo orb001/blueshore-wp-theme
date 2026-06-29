@@ -473,6 +473,21 @@ h6,
   font-size: 16px !important;
 }
 
+.gform_wrapper input[type='text'],
+.gform_wrapper input[type='email'],
+.gform_wrapper input[type='tel'],
+.gform_wrapper select {
+  letter-spacing: 0.03em;
+}
+
+.gform_wrapper input::placeholder {
+  letter-spacing: 0.03em;
+}
+
+.gform_wrapper .custom-select__text {
+  letter-spacing: 0.03em;
+}
+
 /* Focus state */
 .gform_wrapper input[type='text']:focus,
 .gform_wrapper input[type='email']:focus,
@@ -678,4 +693,23 @@ h6,
 
 .gform_wrapper .custom-select__option.is-selected:hover {
   filter: brightness(0.95);
+}
+
+@media (max-width: 768px) {
+  .gform_wrapper input[type="text"],
+  .gform_wrapper input[type="email"],
+  .gform_wrapper input[type="tel"],
+  .gform_wrapper select,
+  .gform_wrapper textarea {
+    font-size: 16px;
+  }
+
+  .gform_wrapper input::placeholder,
+  .gform_wrapper textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .gform_wrapper .custom-select__text {
+    font-size: 16px;
+  }
 }
