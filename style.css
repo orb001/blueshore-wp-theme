@@ -459,7 +459,7 @@ h6,
   border: none;
   border-bottom: 1px solid var(--color-mid-gray);
   border-radius: 0;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10px 0 !important;
   font-size: 20px !important;
   color: var(--color-text);
   box-shadow: none;
@@ -471,12 +471,6 @@ h6,
 }
 .gform_wrapper textarea {
   font-size: 16px !important;
-}
-
-.gform_wrapper input[type='text'],
-.gform_wrapper input[type='email'],
-.gform_wrapper input[type='tel'] {
-  padding: 8px 8px 8px 0;
 }
 
 .gform_wrapper input[type='text'],
@@ -702,9 +696,9 @@ h6,
 }
 
 @media (max-width: 768px) {
-  .gform_wrapper input[type="text"],
-  .gform_wrapper input[type="email"],
-  .gform_wrapper input[type="tel"],
+  .gform_wrapper input[type='text'],
+  .gform_wrapper input[type='email'],
+  .gform_wrapper input[type='tel'],
   .gform_wrapper select,
   .gform_wrapper textarea {
     font-size: 16px;
