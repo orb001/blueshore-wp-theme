@@ -427,3 +427,158 @@ h6,
     grid-template-columns: 1fr;
   }
 }
+
+/* ═══════════════════════════════════════════════════
+   Gravity Form – Blueshore Contracting Style
+   ═══════════════════════════════════════════════════ */
+
+/* ── Field layout ── */
+.gform_wrapper .gform_fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.gform_wrapper .gfield {
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+/* Hide labels (placeholders do the work) */
+.gform_wrapper .gfield_label {
+  display: none;
+}
+
+/* ── Inputs & Textarea ── */
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="email"],
+.gform_wrapper input[type="tel"],
+.gform_wrapper select,
+.gform_wrapper textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-mid-gray);
+  border-radius: 0;
+  padding: 10px 0 10px 0;
+  font-size: 20px;
+  color: var(--color-text);
+  box-shadow: none;
+  outline: none;
+  transition: border-color 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  font-weight: 300;
+}
+.gform_wrapper textarea {
+  font-size: 16px !important;
+}
+
+/* Focus state */
+.gform_wrapper input[type="text"]:focus,
+.gform_wrapper input[type="email"]:focus,
+.gform_wrapper input[type="tel"]:focus,
+.gform_wrapper select:focus,
+.gform_wrapper textarea:focus {
+  border-bottom-color: var(--color-accent);
+  outline: none;
+  box-shadow: none;
+}
+
+/* Placeholder color */
+.gform_wrapper input::placeholder,
+.gform_wrapper textarea::placeholder {
+  color: #747474;
+  font-size: 20px;
+}
+.gform_wrapper textarea::placeholder {
+  font-size: 16px;
+}
+
+/* ── Select dropdown ── */
+.gform_wrapper .ginput_container_select {
+  position: relative;
+}
+.gform_wrapper select {
+  cursor: pointer;
+  color: #747474;
+}
+
+/* Show accent arrow on the right */
+.gform_wrapper .ginput_container_select::after {
+  content: "▼";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-accent);
+  font-size: 11px;
+  pointer-events: none;
+}
+
+/* Once a real value is selected, darken text */
+.gform_wrapper select:not([value=""]) {
+  color: var(--color-text);
+}
+
+/* ── Textarea ── */
+.gform_wrapper textarea {
+  resize: vertical;
+  min-height: 140px;
+  border: 1.5px solid var(--color-mid-gray);
+  border-radius: 4px;
+  padding: 14px 16px;
+  line-height: 1.6;
+}
+.gform_wrapper textarea:focus {
+  border-color: var(--color-accent);
+}
+
+/* ── Submit Button ── */
+.gform_wrapper .gform_footer,
+.gform_wrapper .gform-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+.gform_wrapper .gform_button,
+.gform_wrapper input[type="submit"] {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: 1;
+}
+.gform_wrapper .gform_button:hover,
+.gform_wrapper input[type="submit"]:hover {
+  background-color: var(--color-accent);
+  filter: brightness(0.9);
+  transform: translateY(-1px);
+}
+.gform_wrapper .gform_button:active,
+.gform_wrapper input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ── Validation errors ── */
+.gform_wrapper .gfield_error input,
+.gform_wrapper .gfield_error textarea,
+.gform_wrapper .gfield_error select {
+  border-bottom-color: #c0392b;
+}
+.gform_wrapper .validation_message {
+  color: #c0392b;
+  font-size: 12px;
+  margin-top: 4px;
+}
