@@ -580,7 +580,6 @@ h6,
 .gform_wrapper .gform_button:hover,
 .gform_wrapper input[type='submit']:hover {
   background-color: var(--color-accent);
-  filter: brightness(0.9);
   transform: translateY(-1px);
 }
 .gform_wrapper .gform_button:active,
