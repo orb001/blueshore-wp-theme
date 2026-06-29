@@ -659,7 +659,7 @@ h6,
 /* Options */
 .gform_wrapper .custom-select__option {
   padding: 6px 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   color: var(--color-text);
   cursor: pointer;
