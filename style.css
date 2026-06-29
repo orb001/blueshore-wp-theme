@@ -475,6 +475,12 @@ h6,
 
 .gform_wrapper input[type='text'],
 .gform_wrapper input[type='email'],
+.gform_wrapper input[type='tel'] {
+  padding: 8px 8px 8px 0;
+}
+
+.gform_wrapper input[type='text'],
+.gform_wrapper input[type='email'],
 .gform_wrapper input[type='tel'],
 .gform_wrapper select {
   letter-spacing: 0.03em;
