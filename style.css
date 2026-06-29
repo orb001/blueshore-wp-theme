@@ -712,3 +712,38 @@ h6,
     font-size: 16px;
   }
 }
+
+/* ─── Navigation ────────────────────────────────────────── */
+
+.et_pb_section_0_tb_header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: transparent !important;
+  transition: background-color 0.3s ease;
+}
+
+.et_pb_section_0_tb_header.nav-scrolled {
+  background-color: var(--color-primary) !important;
+}
+
+/* Desktop menu links */
+.et_pb_section_0_tb_header .et-menu a {
+  color: var(--color-white) !important;
+}
+
+/* Mobile hamburger icon */
+.et_pb_section_0_tb_header .mobile_menu_bar::before {
+  color: var(--color-white) !important;
+}
+
+/* Mobile dropdown */
+.et_pb_section_0_tb_header .et_mobile_menu {
+  background-color: var(--color-primary) !important;
+}
+
+.et_pb_section_0_tb_header .et_mobile_menu a {
+  color: var(--color-white) !important;
+}
