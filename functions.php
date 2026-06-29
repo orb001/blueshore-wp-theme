@@ -21,6 +21,13 @@ function blueshore_child_enqueue_styles()
 		'1.0.0',
 		true
 	);
+	wp_enqueue_script(
+		'blueshore-custom-select',
+		get_stylesheet_directory_uri() . '/assets/js/custom-select.js',
+		array(),
+		'1.0.0',
+		true
+	);
 }
 
 require_once get_stylesheet_directory() . '/inc/featured-projects.php';
