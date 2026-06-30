@@ -816,8 +816,8 @@ h6,
     margin-top: 30px !important;
     padding: 20px 24px !important;
     position: relative !important;
-    /* Delay restoring rounded corners until dropdown finishes closing (~500ms) */
-    transition: border-radius 0s 0.5s;
+    /* Smooth restore: 200ms delay matches slideUp, 200ms ease removes snap */
+    transition: border-radius 0.2s 0.2s;
   }
 
   /* When dropdown is open, square off card bottom immediately */
