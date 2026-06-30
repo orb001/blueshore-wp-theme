@@ -809,7 +809,7 @@ h6,
     padding: 0 !important;
   }
 
-  /* Floating nav card — always fully rounded */
+  /* Floating nav card — always fully rounded, sits above dropdown */
   .et_pb_section_0_tb_header .et_pb_menu_inner_container {
     background-color: var(--color-primary) !important;
     border-radius: 24px !important;
@@ -817,16 +817,6 @@ h6,
     padding: 20px 24px !important;
     position: relative !important;
     z-index: 2 !important;
-  }
-
-  /* When menu is open: pull dropdown out of flow and overlap below card */
-  .et_pb_section_0_tb_header .et_pb_menu_inner_container:has(.mobile_nav.opened) .et_mobile_menu {
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin-top: -12px !important;
-    z-index: 1 !important;
   }
 
   /* Hamburger trigger sizing */
@@ -855,11 +845,17 @@ h6,
     background-image: url('/wp-content/uploads/mobile-close.svg') !important;
   }
 
-  /* Mobile dropdown base styles */
+  /* Mobile dropdown — absolute, overlaps 12px under card's rounded bottom */
   .et_pb_section_0_tb_header .et_mobile_menu {
     background-color: var(--color-primary) !important;
     border: none !important;
     box-shadow: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-top: -12px !important;
+    z-index: 1 !important;
     padding: 20px 30px 30px 30px !important;
     border-radius: 0 0 24px 24px !important;
   }
