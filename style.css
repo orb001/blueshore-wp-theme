@@ -279,7 +279,7 @@ h6,
 
 .fp-project-title {
   font-family: var(--font-primary);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 1.2;
   color: var(--color-white);
@@ -408,6 +408,10 @@ h6,
 
   .fp-panel__image img {
     object-fit: cover;
+  }
+
+  .fp-project-title {
+    font-size: 22px;
   }
 
   .fp-panel__bottom {
