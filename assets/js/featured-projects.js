@@ -89,6 +89,32 @@
 			el.addEventListener( 'mouseleave', function () { startAutoRotate(); } );
 		} );
 
+		// ── Touch / swipe ──────────────────────────────
+		var touchStartX = 0;
+		var touchStartY = 0;
+
+		if ( fpPanelsEl ) {
+			fpPanelsEl.addEventListener( 'touchstart', function ( e ) {
+				touchStartX = e.changedTouches[ 0 ].clientX;
+				touchStartY = e.changedTouches[ 0 ].clientY;
+			}, { passive: true } );
+
+			fpPanelsEl.addEventListener( 'touchend', function ( e ) {
+				var deltaX = e.changedTouches[ 0 ].clientX - touchStartX;
+				var deltaY = e.changedTouches[ 0 ].clientY - touchStartY;
+
+				if ( Math.abs( deltaX ) < 50 || Math.abs( deltaX ) <= Math.abs( deltaY ) ) return;
+
+				clearInterval( timer );
+				if ( deltaX < 0 ) {
+					switchTo( ( currentIndex + 1 ) % total );
+				} else {
+					switchTo( ( currentIndex - 1 + total ) % total );
+				}
+				startAutoRotate();
+			}, { passive: true } );
+		}
+
 		// ── Core switch ────────────────────────────────
 		function switchTo( targetIndex ) {
 			if ( isAnimating || targetIndex === currentIndex ) return;
