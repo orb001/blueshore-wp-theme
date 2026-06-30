@@ -107,16 +107,16 @@
 
 				clearInterval( timer );
 				if ( deltaX < 0 ) {
-					switchTo( ( currentIndex + 1 ) % total );
+					switchTo( ( currentIndex + 1 ) % total, true );
 				} else {
-					switchTo( ( currentIndex - 1 + total ) % total );
+					switchTo( ( currentIndex - 1 + total ) % total, true );
 				}
 				startAutoRotate();
 			}, { passive: true } );
 		}
 
 		// ── Core switch ────────────────────────────────
-		function switchTo( targetIndex ) {
+		function switchTo( targetIndex, instant ) {
 			if ( isAnimating || targetIndex === currentIndex ) return;
 			isAnimating = true;
 
@@ -137,6 +137,11 @@
 			var leavingPanel  = panels[ leavingIndex ];
 			var arrivingPanel = panels[ targetIndex ];
 
+			if ( instant ) {
+				leavingPanel.style.transition  = 'none';
+				arrivingPanel.style.transition = 'none';
+			}
+
 			leavingPanel.classList.add( 'is-leaving' );
 			leavingPanel.classList.remove( 'is-active' );
 			leavingPanel.setAttribute( 'aria-hidden', 'true' );
@@ -144,10 +149,15 @@
 			arrivingPanel.classList.add( 'is-active' );
 			arrivingPanel.setAttribute( 'aria-hidden', 'false' );
 
+			var duration = instant ? 0 : CROSSFADE_DURATION;
 			setTimeout( function () {
 				leavingPanel.classList.remove( 'is-leaving' );
+				if ( instant ) {
+					leavingPanel.style.transition  = '';
+					arrivingPanel.style.transition = '';
+				}
 				isAnimating = false;
-			}, CROSSFADE_DURATION );
+			}, duration );
 		}
 
 		function updateOrder( activeIndex ) {
