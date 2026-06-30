@@ -822,7 +822,7 @@ h6,
 
   /* When dropdown is open, square off card bottom immediately */
   .et_pb_section_0_tb_header .et_pb_menu_inner_container:has(.mobile_nav.opened) {
-    border-radius: 20px 20px 0 0 !important;
+    border-radius: 24px 24px 0 0 !important;
     margin-bottom: 0 !important;
     transition: none !important;
   }
@@ -872,7 +872,7 @@ h6,
   /* Nav link text — large, spaced */
   .et_pb_section_0_tb_header .et_mobile_menu li a {
     font-size: 16px !important;
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     color: var(--color-white) !important;
     text-transform: uppercase !important;
     letter-spacing: 0.06em !important;
@@ -889,7 +889,7 @@ h6,
   .et_pb_section_0_tb_header .et_mobile_menu .nav-btn {
     display: flex !important;
     justify-content: flex-end !important;
-    margin-top: 8px !important;
+    margin-top: -39px !important;
   }
 
   .et_pb_section_0_tb_header .et_mobile_menu .nav-btn a {
