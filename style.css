@@ -991,3 +991,13 @@ h6,
     padding: 10px 22px !important;
   }
 }
+
+/* ─── What We Do — equal-height titles ─────────────────── */
+.home-services-row .et_pb_column_1_3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-services-row .whatwedo-title {
+  min-height: 120px; /* enough for 3 lines of ~26–28px heading text */
+}
