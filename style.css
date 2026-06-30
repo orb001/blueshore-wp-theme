@@ -827,6 +827,11 @@ h6,
     transition: none !important;
   }
 
+  .et_pb_section_0_tb_header .et_pb_menu__logo-wrap {
+    position: relative !important;
+    z-index: 9 !important;
+  }
+
   /* Hamburger trigger sizing */
   .et_pb_section_0_tb_header .mobile_menu_bar {
     width: 32px !important;
