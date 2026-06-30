@@ -729,9 +729,26 @@ h6,
   background-color: var(--color-primary) !important;
 }
 
+/* Vertically center nav items */
+.et_pb_menu .et_pb_menu__menu,
+.et_pb_menu .et_pb_menu__menu > nav,
+.et_pb_menu .et_pb_menu__menu > nav > ul {
+  display: flex !important;
+  align-items: center !important;
+}
+
 /* Desktop menu links */
 .et_pb_section_0_tb_header .et-menu a {
   color: var(--color-white) !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  font-size: 16px !important;
+  letter-spacing: 0.06em !important;
+}
+
+.et_pb_section_0_tb_header .et-menu li:not(.nav-btn) a:hover {
+  color: var(--color-accent) !important;
+  opacity: 1 !important;
 }
 
 /* Mobile hamburger icon */
@@ -746,4 +763,29 @@ h6,
 
 .et_pb_section_0_tb_header .et_mobile_menu a {
   color: var(--color-white) !important;
+  font-weight: 300 !important;
+  text-transform: uppercase !important;
+}
+
+/* Contact Us nav button */
+.et_pb_section_0_tb_header .et-menu .nav-btn a,
+.et_pb_section_0_tb_header .et_mobile_menu .nav-btn a {
+  background-color: var(--color-accent) !important;
+  color: var(--color-white) !important;
+  border-radius: 50px !important;
+  padding: 10px 22px !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.et_pb_section_0_tb_header .et-menu .nav-btn a:hover,
+.et_pb_section_0_tb_header .et_mobile_menu .nav-btn a:hover {
+  background-color: var(--color-white) !important;
+  color: var(--color-accent) !important;
+  opacity: 1 !important;
 }
