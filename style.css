@@ -406,7 +406,6 @@ h6,
   }
 
   .fp-panel__image img {
-    height: 400px;
     object-fit: cover;
   }
 
