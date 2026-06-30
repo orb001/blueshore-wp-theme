@@ -37,4 +37,10 @@ function blueshore_child_enqueue_styles()
 	);
 }
 
+function blueshore_preload_nav_icons() {
+	echo '<link rel="preload" href="/wp-content/uploads/mobile-open.svg" as="image" type="image/svg+xml">' . "\n";
+	echo '<link rel="preload" href="/wp-content/uploads/mobile-close.svg" as="image" type="image/svg+xml">' . "\n";
+}
+add_action( 'wp_head', 'blueshore_preload_nav_icons' );
+
 require_once get_stylesheet_directory() . '/inc/featured-projects.php';

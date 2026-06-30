@@ -817,7 +817,7 @@ h6,
     padding: 20px 24px !important;
     position: relative !important;
     /* Delay restoring rounded corners until dropdown finishes closing (~500ms) */
-    transition: border-radius 0s 0.5s, margin-bottom 0s 0.5s;
+    transition: border-radius 0s 0.5s;
   }
 
   /* When dropdown is open, square off card bottom immediately */
@@ -885,23 +885,11 @@ h6,
     opacity: 1 !important;
   }
 
-  /* Contact Us — pill in normal flow when closed */
+  /* Contact Us — pill in normal flow, right-aligned */
   .et_pb_section_0_tb_header .et_mobile_menu .nav-btn {
     display: flex !important;
     justify-content: flex-end !important;
     margin-top: 8px !important;
-    opacity: 0;
-    transition: opacity 0.2s ease !important;
-  }
-
-  /* Absolute position only when menu is open */
-  .et_pb_section_0_tb_header .mobile_nav.opened .et_mobile_menu .nav-btn {
-    position: absolute !important;
-    bottom: 30px !important;
-    right: 30px !important;
-    margin-top: 0 !important;
-    opacity: 1;
-    transition: opacity 0.2s ease 0.25s !important;
   }
 
   .et_pb_section_0_tb_header .et_mobile_menu .nav-btn a {
