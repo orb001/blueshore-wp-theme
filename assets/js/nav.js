@@ -1,5 +1,19 @@
-( function () {
+( function ( $ ) {
 	'use strict';
+
+	// Speed up Divi's mobile menu slide animation
+	var _down = $.fn.slideDown;
+	var _up   = $.fn.slideUp;
+
+	$.fn.slideDown = function ( speed, easing, cb ) {
+		if ( this.hasClass( 'et_mobile_menu' ) ) speed = 200;
+		return _down.call( this, speed, easing, cb );
+	};
+
+	$.fn.slideUp = function ( speed, easing, cb ) {
+		if ( this.hasClass( 'et_mobile_menu' ) ) speed = 200;
+		return _up.call( this, speed, easing, cb );
+	};
 
 	var SCROLL_THRESHOLD = 60;
 
@@ -19,4 +33,4 @@
 		window.addEventListener( 'scroll', onScroll, { passive: true } );
 		onScroll();
 	} );
-} )();
+} )( jQuery );

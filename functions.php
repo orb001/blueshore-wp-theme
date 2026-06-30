@@ -31,7 +31,7 @@ function blueshore_child_enqueue_styles()
 	wp_enqueue_script(
 		'blueshore-nav',
 		get_stylesheet_directory_uri() . '/assets/js/nav.js',
-		array(),
+		array( 'jquery' ),
 		'1.0.0',
 		true
 	);
