@@ -933,6 +933,13 @@ h6,
     background-image: url('/wp-content/uploads/mobile-close.svg') !important;
   }
 
+  /* Reset intermediate wrappers so et_mobile_menu anchors to et_pb_menu_inner_container, not et_pb_menu__wrap */
+  .et_pb_section_0_tb_header .et_pb_menu__wrap,
+  .et_pb_section_0_tb_header .et_mobile_nav_menu,
+  .et_pb_section_0_tb_header .mobile_nav {
+    position: static !important;
+  }
+
   /* Mobile dropdown — absolute overlay on the card so it spans full width */
   .et_pb_section_0_tb_header .et_mobile_menu {
     background-color: var(--color-primary) !important;
