@@ -398,6 +398,7 @@ h6,
   .fp-panel.is-active,
   .fp-panel.is-leaving {
     grid-template-columns: 1fr;
+    gap: 45px;
   }
 
   .fp-panel__image {
