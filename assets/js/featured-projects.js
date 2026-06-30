@@ -33,7 +33,7 @@
 				startAutoRotate();
 			} );
 
-			// Arrow key navigation within the tablist
+			// Arrow-key navigation within the tablist
 			tab.addEventListener( 'keydown', function ( e ) {
 				var newIndex = null;
 				if ( e.key === 'ArrowDown' || e.key === 'ArrowRight' ) {
@@ -47,6 +47,25 @@
 					switchTo( newIndex );
 					tabs[ newIndex ].focus();
 					startAutoRotate();
+				}
+			} );
+		} );
+
+		// ── Dot navigator click ────────────────────────
+		var dotEls = Array.from( document.querySelectorAll( '.fp-nav__dot' ) );
+		dotEls.forEach( function ( dot ) {
+			dot.addEventListener( 'click', function () {
+				var targetIndex = parseInt( dot.dataset.index, 10 );
+				if ( targetIndex === currentIndex || isAnimating ) return;
+				clearInterval( timer );
+				switchTo( targetIndex );
+				startAutoRotate();
+			} );
+
+			dot.addEventListener( 'keydown', function ( e ) {
+				if ( e.key === 'Enter' || e.key === ' ' ) {
+					e.preventDefault();
+					dot.click();
 				}
 			} );
 		} );

@@ -322,7 +322,52 @@ h6,
 
 .fp-cta {
   align-self: flex-start;
+}
+
+.fp-cta::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.746094 11.0562L10.7461 1.05615M0.746094 1.05615H10.7461V11.0562' stroke='%23ffffff' stroke-width='2.11222'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-left: 8px;
+  transition: background-image 0.2s ease;
+}
+
+.fp-cta:hover::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.746094 11.0562L10.7461 1.05615M0.746094 1.05615H10.7461V11.0562' stroke='%23E9884E' stroke-width='2.11222'/%3E%3C/svg%3E");
+}
+
+/* ── Panel Bottom (nav dots + CTA row) ──────────── */
+.fp-panel__bottom {
   margin-top: auto;
+  display: block;
+}
+
+.fp-nav {
+  display: none;
+}
+
+.fp-nav__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.fp-nav__dot.is-active {
+  background: var(--color-accent);
+}
+
+.fp-nav__dot:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* ── Panel Image (right) ────────────────────────── */
@@ -346,6 +391,10 @@ h6,
     font-size: 34px;
   }
 
+  .fp-tabs {
+    display: none !important;
+  }
+
   .fp-panel.is-active,
   .fp-panel.is-leaving {
     grid-template-columns: 1fr;
@@ -353,11 +402,30 @@ h6,
 
   .fp-panel__image {
     max-height: 400px;
+    order: -1;
   }
 
   .fp-panel__image img {
     height: 400px;
     object-fit: cover;
+  }
+
+  .fp-panel__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .fp-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 14px 18px;
+    flex-shrink: 0;
   }
 }
 

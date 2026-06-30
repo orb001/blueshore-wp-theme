@@ -176,6 +176,8 @@ function blueshore_featured_projects_shortcode() {
 		return '<p class="fp-empty">No featured projects found. Add projects under Featured Projects in the admin menu.</p>';
 	}
 
+	$total = count( $projects );
+
 	ob_start();
 	?>
 	<div class="fp-panels">
@@ -208,15 +210,28 @@ function blueshore_featured_projects_shortcode() {
 						<?php echo esc_html( get_field( 'client_name', $id ) ); ?>
 					</span>
 				</div>
-				<?php if ( $button_url ) : ?>
-				<a
-					href="<?php echo esc_url( $button_url ); ?>"
-					class="btn-primary fp-cta"
-					aria-label="See our <?php echo esc_attr( $tab_title ); ?> projects"
-				>
-					See Our Projects
-				</a>
-				<?php endif; ?>
+				<div class="fp-panel__bottom">
+					<div class="fp-nav" aria-hidden="true">
+						<?php for ( $d = 0; $d < $total; $d++ ) : ?>
+						<span
+							class="fp-nav__dot<?php echo ( $d === $index ) ? ' is-active' : ''; ?>"
+							data-index="<?php echo esc_attr( $d ); ?>"
+							role="button"
+							tabindex="0"
+							aria-label="Go to project <?php echo esc_attr( $d + 1 ); ?>"
+						></span>
+						<?php endfor; ?>
+					</div>
+					<?php if ( $button_url ) : ?>
+					<a
+						href="<?php echo esc_url( $button_url ); ?>"
+						class="btn-primary fp-cta"
+						aria-label="See our <?php echo esc_attr( $tab_title ); ?> projects"
+					>
+						See Our Projects
+					</a>
+					<?php endif; ?>
+				</div>
 			</div>
 
 			<div class="fp-panel__image">
