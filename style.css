@@ -579,12 +579,11 @@ h6,
 }
 .gform_wrapper .gform_button:hover,
 .gform_wrapper input[type='submit']:hover {
-  background-color: var(--color-accent);
-  transform: translateY(-1px);
+  background-color: var(--color-white);
+  color: var(--color-accent);
 }
 .gform_wrapper .gform_button:active,
 .gform_wrapper input[type='submit']:active {
-  transform: translateY(0);
 }
 
 /* ── Validation errors ── */
