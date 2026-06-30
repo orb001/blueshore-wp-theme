@@ -822,7 +822,7 @@ h6,
 
   /* When dropdown is open, square off card bottom immediately */
   .et_pb_section_0_tb_header .et_pb_menu_inner_container:has(.mobile_nav.opened) {
-    border-radius: 24px 24px 0 0 !important;
+    border-radius: 24px !important;
     margin-bottom: 0 !important;
     transition: none !important;
   }
@@ -858,7 +858,8 @@ h6,
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    padding: 100px 30px 30px 30px !important;
+    margin-top: -24px !important;
+    padding: 124px 30px 30px 30px !important;
     border-radius: 0 0 24px 24px !important;
   }
 
