@@ -355,14 +355,14 @@ h6,
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-accent);
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.3s ease;
 }
 
 .fp-nav__dot.is-active {
-  background: var(--color-accent);
+  background: var(--color-brown);
 }
 
 .fp-nav__dot:focus-visible {
@@ -422,7 +422,7 @@ h6,
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-light-gray);
     border-radius: 50px;
     padding: 14px 18px;
     flex-shrink: 0;
