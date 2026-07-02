@@ -991,3 +991,7 @@ h6,
     padding: 10px 22px !important;
   }
 }
+
+li.et_first_mobile_item{
+    margin-top:50px;
+}
