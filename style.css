@@ -652,6 +652,7 @@ h6,
   -webkit-appearance: none;
   appearance: none;
   line-height: 1;
+  line-height: 1;
 }
 .gform_wrapper .gform_button:hover,
 .gform_wrapper input[type='submit']:hover {
@@ -786,6 +787,7 @@ h6,
   .gform_wrapper .custom-select__text {
     font-size: 16px;
   }
+
 }
 
 /* ─── Navigation ────────────────────────────────────────── */
