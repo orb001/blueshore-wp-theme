@@ -112,6 +112,18 @@ h6,
   color: var(--color-accent);
 }
 
+.btn-secondary::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.746094 11.0562L10.7461 1.05615M0.746094 1.05615H10.7461V11.0562' stroke='%23E9884E' stroke-width='2.11222'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
 /* ─── Checklist ─────────────────────────────────────────── */
 .check-list ul {
   list-style: none;
@@ -158,19 +170,6 @@ h6,
   height: 9px;
   background: url('/wp-content/uploads/arrow-icon.svg') no-repeat center center;
   background-size: contain;
-}
-
-/* ─── Buttons ───────────────────────────────────────────── */
-.btn-secondary::after {
-  content: '';
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.746094 11.0562L10.7461 1.05615M0.746094 1.05615H10.7461V11.0562' stroke='%23E9884E' stroke-width='2.11222'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  vertical-align: middle;
-  margin-left: 8px;
 }
 
 /* ─── Full Height Image ─────────────────────────────── */
@@ -451,7 +450,10 @@ h6,
   }
 }
 
-/* Projects list 3x2 grid */
+/* ═══════════════════════════════════════════════════
+   Projects List Grid
+   ═══════════════════════════════════════════════════ */
+
 .projects-list-grid .et_pb_column {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -474,6 +476,7 @@ h6,
 
 .projects-list-grid .et_pb_column .et_pb_blurb .et_pb_blurb_container {
   flex: 1;
+  padding: 0 14px;
 }
 
 .projects-list-grid .et_pb_column .et_pb_blurb .et_pb_image_wrap {
@@ -990,10 +993,9 @@ h6,
     letter-spacing: 0 !important;
     padding: 10px 22px !important;
   }
+
+  li.et_first_mobile_item {
+    margin-top: 50px;
+  }
 }
 
-li.et_first_mobile_item{
-    margin-top:50px;
-}
-
-.projects-list-grid .et_pb_blurb_container {padding: 0 14px;}
