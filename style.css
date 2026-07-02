@@ -804,6 +804,7 @@ h6,
 
 .et_pb_section_0_tb_header.nav-scrolled {
   background-color: var(--color-primary) !important;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Vertically center nav items — desktop only */
@@ -875,6 +876,7 @@ h6,
   .et_pb_section_0_tb_header,
   .et_pb_section_0_tb_header.nav-scrolled {
     background-color: transparent !important;
+    box-shadow: none;
   }
 
   /* Strip row/column padding so card margins are the only offset */
