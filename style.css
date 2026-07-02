@@ -995,3 +995,5 @@ h6,
 li.et_first_mobile_item{
     margin-top:50px;
 }
+
+.projects-list-grid .et_pb_blurb_container {padding: 0 14px;}
