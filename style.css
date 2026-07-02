@@ -792,7 +792,12 @@ h6,
 
 /* ─── Navigation ────────────────────────────────────────── */
 
-.et_pb_section_0_tb_header {
+.et_pb_menu--with-logo {
+  border-radius: 24px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.1);
+}
+
+#main-header {
   position: fixed !important;
   top: 0;
   left: 0;
@@ -802,7 +807,7 @@ h6,
   transition: background-color 0.3s ease;
 }
 
-.et_pb_section_0_tb_header.nav-scrolled {
+#main-header.nav-scrolled {
   background-color: var(--color-primary) !important;
 }
 
@@ -817,7 +822,7 @@ h6,
 }
 
 /* Desktop menu links */
-.et_pb_section_0_tb_header .et-menu a {
+#main-header .et-menu a {
   color: var(--color-white) !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
@@ -825,30 +830,30 @@ h6,
   letter-spacing: 0.06em !important;
 }
 
-.et_pb_section_0_tb_header .et-menu li:not(.nav-btn) a:hover {
+#main-header .et-menu li:not(.nav-btn) a:hover {
   color: var(--color-accent) !important;
   opacity: 1 !important;
 }
 
 /* Mobile hamburger icon */
-.et_pb_section_0_tb_header .mobile_menu_bar::before {
+#main-header .mobile_menu_bar::before {
   color: var(--color-white) !important;
 }
 
 /* Mobile dropdown */
-.et_pb_section_0_tb_header .et_mobile_menu {
+#main-header .et_mobile_menu {
   background-color: var(--color-primary) !important;
 }
 
-.et_pb_section_0_tb_header .et_mobile_menu a {
+#main-header .et_mobile_menu a {
   color: var(--color-white) !important;
   font-weight: 300 !important;
   text-transform: uppercase !important;
 }
 
 /* Contact Us nav button */
-.et_pb_section_0_tb_header .et-menu .nav-btn a,
-.et_pb_section_0_tb_header .et_mobile_menu .nav-btn a {
+#main-header .et-menu .nav-btn a,
+#main-header .et_mobile_menu .nav-btn a {
   background-color: var(--color-accent) !important;
   color: var(--color-white) !important;
   border-radius: 50px !important;
@@ -862,8 +867,8 @@ h6,
   transition: background-color 0.2s ease, color 0.2s ease !important;
 }
 
-.et_pb_section_0_tb_header .et-menu .nav-btn a:hover,
-.et_pb_section_0_tb_header .et_mobile_menu .nav-btn a:hover {
+#main-header .et-menu .nav-btn a:hover,
+#main-header .et_mobile_menu .nav-btn a:hover {
   background-color: var(--color-white) !important;
   color: var(--color-accent) !important;
   opacity: 1 !important;
@@ -872,23 +877,23 @@ h6,
 /* ─── Mobile Navigation ────────────────────────────────── */
 @media (max-width: 980px) {
   /* Section always transparent on mobile — card handles the background */
-  .et_pb_section_0_tb_header,
-  .et_pb_section_0_tb_header.nav-scrolled {
+  #main-header,
+  #main-header.nav-scrolled {
     background-color: transparent !important;
   }
 
   /* Strip row/column padding so card margins are the only offset */
-  .et_pb_section_0_tb_header .et_pb_row {
+  #main-header .et_pb_row {
     padding: 0 !important;
     max-width: 100% !important;
   }
 
-  .et_pb_section_0_tb_header .et_pb_column {
+  #main-header .et_pb_column {
     padding: 0 !important;
   }
 
   /* Floating nav card */
-  .et_pb_section_0_tb_header .et_pb_menu_inner_container {
+  #main-header .et_pb_menu_inner_container {
     background-color: var(--color-primary) !important;
     border-radius: 24px !important;
     margin-top: 30px !important;
@@ -899,19 +904,19 @@ h6,
   }
 
   /* When dropdown is open, square off card bottom immediately */
-  .et_pb_section_0_tb_header .et_pb_menu_inner_container:has(.mobile_nav.opened) {
+  #main-header .et_pb_menu_inner_container:has(.mobile_nav.opened) {
     border-radius: 24px !important;
     margin-bottom: 0 !important;
     transition: none !important;
   }
 
-  .et_pb_section_0_tb_header .et_pb_menu__logo-wrap {
+  #main-header .et_pb_menu__logo-wrap {
     position: relative !important;
     z-index: 9 !important;
   }
 
   /* Hamburger trigger sizing */
-  .et_pb_section_0_tb_header .mobile_menu_bar {
+  #main-header .mobile_menu_bar {
     width: 32px !important;
     height: 32px !important;
     display: flex !important;
@@ -921,7 +926,7 @@ h6,
   }
 
   /* Open icon (default) */
-  .et_pb_section_0_tb_header .mobile_menu_bar::before {
+  #main-header .mobile_menu_bar::before {
     content: '' !important;
     background-image: url('/wp-content/uploads/mobile-open.svg') !important;
     background-size: contain !important;
@@ -934,19 +939,19 @@ h6,
   }
 
   /* Close icon when menu is open */
-  .et_pb_section_0_tb_header .mobile_nav.opened .mobile_menu_bar::before {
+  #main-header .mobile_nav.opened .mobile_menu_bar::before {
     background-image: url('/wp-content/uploads/mobile-close.svg') !important;
   }
 
   /* Reset intermediate wrappers so et_mobile_menu anchors to et_pb_menu_inner_container, not et_pb_menu__wrap */
-  .et_pb_section_0_tb_header .et_pb_menu__wrap,
-  .et_pb_section_0_tb_header .et_mobile_nav_menu,
-  .et_pb_section_0_tb_header .mobile_nav {
+  #main-header .et_pb_menu__wrap,
+  #main-header .et_mobile_nav_menu,
+  #main-header .mobile_nav {
     position: static !important;
   }
 
   /* Mobile dropdown — absolute overlay on the card so it spans full width */
-  .et_pb_section_0_tb_header .et_mobile_menu {
+  #main-header .et_mobile_menu {
     background-color: var(--color-primary) !important;
     border: none !important;
     box-shadow: none !important;
@@ -960,14 +965,14 @@ h6,
   }
 
   /* Remove item dividers */
-  .et_pb_section_0_tb_header .et_mobile_menu li,
-  .et_pb_section_0_tb_header .et_mobile_menu li a {
+  #main-header .et_mobile_menu li,
+  #main-header .et_mobile_menu li a {
     border: none !important;
     background: transparent !important;
   }
 
   /* Nav link text — large, spaced */
-  .et_pb_section_0_tb_header .et_mobile_menu li a {
+  #main-header .et_mobile_menu li a {
     font-size: 16px !important;
     font-weight: 400 !important;
     color: var(--color-white) !important;
@@ -977,19 +982,19 @@ h6,
     line-height: 1.2 !important;
   }
 
-  .et_pb_section_0_tb_header .et_mobile_menu li:not(.nav-btn) a:hover {
+  #main-header .et_mobile_menu li:not(.nav-btn) a:hover {
     color: var(--color-accent) !important;
     opacity: 1 !important;
   }
 
   /* Contact Us — pill in normal flow, right-aligned */
-  .et_pb_section_0_tb_header .et_mobile_menu .nav-btn {
+  #main-header .et_mobile_menu .nav-btn {
     display: flex !important;
     justify-content: flex-end !important;
     margin-top: -39px !important;
   }
 
-  .et_pb_section_0_tb_header .et_mobile_menu .nav-btn a {
+  #main-header .et_mobile_menu .nav-btn a {
     font-size: 16px !important;
     text-transform: none !important;
     letter-spacing: 0 !important;
