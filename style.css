@@ -384,75 +384,6 @@ h6,
   object-fit: cover;
 }
 
-/* ── Responsive ─────────────────────────────────── */
-@media (max-width: 1024px) {
-  .fp-tab.is-active {
-    font-size: 34px;
-  }
-
-  .fp-tabs {
-    display: none !important;
-  }
-
-  .fp-panel.is-active,
-  .fp-panel.is-leaving {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .fp-panel__image {
-    order: -1;
-  }
-
-  .fp-panel__image img {
-    object-fit: cover;
-  }
-
-  .fp-project-title {
-    font-size: 22px;
-  }
-
-  .fp-panel__bottom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 36px;
-  }
-
-  .fp-nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--color-light-gray);
-    border-radius: 50px;
-    padding: 14px 18px;
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 640px) {
-  .fp-tab {
-    font-size: 34px;
-  }
-
-  .fp-tab.is-active {
-    font-size: 34px;
-  }
-
-  .fp-panel__content {
-    gap: 18px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fp-tab,
-  .fp-panel {
-    transition: none;
-  }
-}
-
 /* ═══════════════════════════════════════════════════
    Projects List Grid
    ═══════════════════════════════════════════════════ */
@@ -503,18 +434,6 @@ h6,
 
 .services-blurbs .et_pb_blurb_description {
   max-width: 237px;
-}
-
-@media (max-width: 980px) {
-  .projects-list-grid .et_pb_column {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .projects-list-grid .et_pb_column {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ═══════════════════════════════════════════════════
@@ -638,8 +557,7 @@ h6,
 }
 
 /* ── Submit Button ── */
-.gform_wrapper .gform_footer,
-.gform_wrapper .gform-footer {
+.gform_wrapper .gform_footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 12px;
@@ -664,8 +582,7 @@ h6,
   box-shadow: none;
   -webkit-appearance: none;
   appearance: none;
-  line-height: 1;
-  line-height: 1;
+  line-height: 1 !important;
 }
 .gform_wrapper .gform_button:hover,
 .gform_wrapper input[type='submit']:hover {
@@ -783,26 +700,6 @@ h6,
   filter: brightness(0.95);
 }
 
-@media (max-width: 768px) {
-  .gform_wrapper input[type='text'],
-  .gform_wrapper input[type='email'],
-  .gform_wrapper input[type='tel'],
-  .gform_wrapper select,
-  .gform_wrapper textarea {
-    font-size: 16px;
-  }
-
-  .gform_wrapper input::placeholder,
-  .gform_wrapper textarea::placeholder {
-    font-size: 16px;
-  }
-
-  .gform_wrapper .custom-select__text {
-    font-size: 16px;
-  }
-
-}
-
 /* ─── Navigation ────────────────────────────────────────── */
 
 .et_pb_section_0_tb_header {
@@ -818,16 +715,6 @@ h6,
 .et_pb_section_0_tb_header.nav-scrolled {
   background-color: var(--color-primary) !important;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Vertically center nav items — desktop only */
-@media (min-width: 981px) {
-  .et_pb_menu .et_pb_menu__menu,
-  .et_pb_menu .et_pb_menu__menu > nav,
-  .et_pb_menu .et_pb_menu__menu > nav > ul {
-    display: flex !important;
-    align-items: center !important;
-  }
 }
 
 /* Desktop menu links */
@@ -873,7 +760,9 @@ h6,
   font-size: 16px !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
-  transition: background-color 0.2s ease, color 0.2s ease !important;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease !important;
 }
 
 .et_pb_section_0_tb_header .et-menu .nav-btn a:hover,
@@ -881,6 +770,122 @@ h6,
   background-color: var(--color-white) !important;
   color: var(--color-accent) !important;
   opacity: 1 !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   Media Queries
+   ═══════════════════════════════════════════════════ */
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .fp-tab.is-active {
+    font-size: 34px;
+  }
+
+  .fp-tabs {
+    display: none !important;
+  }
+
+  .fp-panel.is-active,
+  .fp-panel.is-leaving {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .fp-panel__image {
+    order: -1;
+  }
+
+  .fp-panel__image img {
+    object-fit: cover;
+  }
+
+  .fp-project-title {
+    font-size: 22px;
+  }
+
+  .fp-panel__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 36px;
+  }
+
+  .fp-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-light-gray);
+    border-radius: 50px;
+    padding: 14px 18px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .fp-tab {
+    font-size: 34px;
+  }
+
+  .fp-tab.is-active {
+    font-size: 34px;
+  }
+
+  .fp-panel__content {
+    gap: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fp-tab,
+  .fp-panel {
+    transition: none;
+  }
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 980px) {
+  .projects-list-grid .et_pb_column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-list-grid .et_pb_column {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .gform_wrapper input[type='text'],
+  .gform_wrapper input[type='email'],
+  .gform_wrapper input[type='tel'],
+  .gform_wrapper select,
+  .gform_wrapper textarea {
+    font-size: 16px;
+  }
+
+  .gform_wrapper input::placeholder,
+  .gform_wrapper textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .gform_wrapper .custom-select__text {
+    font-size: 16px;
+  }
+}
+
+/* Vertically center nav items — desktop only */
+@media (min-width: 981px) {
+  .et_pb_menu .et_pb_menu__menu,
+  .et_pb_menu .et_pb_menu__menu > nav,
+  .et_pb_menu .et_pb_menu__menu > nav > ul {
+    display: flex !important;
+    align-items: center !important;
+  }
 }
 
 /* ─── Mobile Navigation ────────────────────────────────── */
@@ -914,7 +919,8 @@ h6,
   }
 
   /* When dropdown is open, square off card bottom immediately */
-  .et_pb_section_0_tb_header .et_pb_menu_inner_container:has(.mobile_nav.opened) {
+  .et_pb_section_0_tb_header
+    .et_pb_menu_inner_container:has(.mobile_nav.opened) {
     border-radius: 24px !important;
     margin-bottom: 0 !important;
     transition: none !important;
@@ -1020,4 +1026,3 @@ h6,
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3) !important;
   }
 }
-
