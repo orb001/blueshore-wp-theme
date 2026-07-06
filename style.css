@@ -880,6 +880,10 @@ h6,
   .gform_wrapper .gform_footer {
     padding-top: 0 !important;
   }
+
+  .gform_wrapper .gfield {
+    margin-bottom: 18px;
+  }
 }
 
 /* Vertically center nav items — desktop only */
