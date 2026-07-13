@@ -56,10 +56,11 @@ function blueshore_register_featured_projects_fields() {
 				'label'        => 'Description',
 				'name'         => 'description',
 				'type'         => 'textarea',
-				'instructions' => 'Two to four sentence project summary. Plain text only.',
+				'instructions' => 'Aim for 150–180 characters (about 1–2 short sentences). On mobile the description is clamped to 5 lines with reserved space, so longer text is visually cut off with an ellipsis. Avoid manual line breaks — let text wrap naturally.',
 				'required'     => 1,
 				'rows'         => 3,
 				'new_lines'    => 'br',
+				'maxlength'    => 180,
 			),
 			array(
 				'key'          => 'field_fp_client_label',
