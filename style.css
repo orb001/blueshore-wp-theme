@@ -727,8 +727,13 @@ h6,
 }
 
 .et_pb_section_0_tb_header .et-menu li:not(.nav-btn) a:hover {
-  color: var(--color-accent) !important;
+  color: var(--color-brown) !important;
   opacity: 1 !important;
+}
+
+/* Active nav item */
+.et_pb_section_0_tb_header .et-menu li.current-menu-item:not(.nav-btn) a {
+  color: var(--color-accent) !important;
 }
 
 /* Mobile hamburger icon */
@@ -1007,8 +1012,13 @@ h6,
   }
 
   .et_pb_section_0_tb_header .et_mobile_menu li:not(.nav-btn) a:hover {
-    color: var(--color-accent) !important;
+    color: var(--color-brown) !important;
     opacity: 1 !important;
+  }
+
+  /* Active nav item */
+  .et_pb_section_0_tb_header .et_mobile_menu li.current-menu-item:not(.nav-btn) a {
+    color: var(--color-accent) !important;
   }
 
   /* Contact Us — pill in normal flow, right-aligned */
