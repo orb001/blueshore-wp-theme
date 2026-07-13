@@ -133,7 +133,7 @@ h6,
 
 .check-list ul li {
   position: relative;
-  padding-left: 28px;
+  padding-left: 34px;
   margin-bottom: 0.5em;
 }
 
@@ -141,9 +141,9 @@ h6,
   content: '';
   position: absolute;
   left: 0;
-  top: 0.4em;
-  width: 18px;
-  height: 18px;
+  top: 0.1em;
+  width: 24px;
+  height: 16px;
   background: url('/wp-content/uploads/check-icon.svg') no-repeat center center;
   background-size: contain;
 }
